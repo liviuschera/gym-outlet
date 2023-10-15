@@ -1,15 +1,20 @@
 import { Outlet, Link } from "react-router-dom";
+import "./navigation.styles.scss";
+import logo from "../../assets/logo.png";
 
 const Navigation = () => {
   return (
     <>
       <div className="navigation">
         <Link className="logo-container" to="/">
-          <div>logo</div>
+          <img className="logo" src={logo} alt="The Gym Outlet logo" />
         </Link>
         <div className="nav-links-container">
           <Link className="nav-link" to="/shop">
-            shop
+            SHOP
+          </Link>
+          <Link className="nav-link" to="/sign-in">
+            SIGN IN
           </Link>
         </div>
       </div>
