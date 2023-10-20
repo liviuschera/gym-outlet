@@ -64,12 +64,6 @@ const SignUpForm = () => {
         return;
       }
     }
-
-    // console.log("handlesubmit", event.target);
-    // console.log(
-    //   "create user with email and password",
-    //   await createAuthUserWithEmailAndPassword(email, password)
-    // );
   };
 
   const handleChange = (event) => {
@@ -78,18 +72,11 @@ const SignUpForm = () => {
   };
 
   return (
-    <div className="sign-up-container">
+    <div className="sign-up-form-container">
       <h2>Don't have an account?</h2>
-      <p>Sign up with your email and password</p>
-      <p>
-        <a href="/sign-in">Sign In</a>
-      </p>
-      <p>
-        <a href="/forgot-password">Forgot Password?</a>
-      </p>
-      <form onSubmit={handleSubmit}>
-        <h2>User Info</h2>
+      <span>Sign up with your email and password</span>
 
+      <form onSubmit={handleSubmit}>
         <FormInput
           label="User Name"
           type="text"
