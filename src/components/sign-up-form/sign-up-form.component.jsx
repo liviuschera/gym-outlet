@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useContext } from "react";
 
 import {
   createAuthUserWithEmailAndPassword,
@@ -8,6 +8,7 @@ import {
 import FormInput from "../form-input/form-input.component";
 import "./sign-up-form.styles.scss";
 import Button from "../button/button.component";
+import { UserContext } from "../../context/user.context";
 
 const defaultFormFields = {
   displayName: "",
@@ -15,13 +16,11 @@ const defaultFormFields = {
   password: "",
   confirmPassword: "",
 };
-const css = "color: DodgerBlue; font-size: 13px;";
 
 const SignUpForm = () => {
   const [formFields, setFormFields] = useState(defaultFormFields);
   const { displayName, email, password, confirmPassword } = formFields;
-
-  console.log(`%c formFields: ${JSON.stringify(formFields, null, 3)}`, css);
+  const { setCurrentUser } = useContext(UserContext);
 
   const resetFormFields = () => {
     setFormFields(defaultFormFields);
@@ -43,16 +42,13 @@ const SignUpForm = () => {
         email,
         password
       );
-      await createUserDocumentFromAuth(user, { displayName });
+      const createUser = await createUserDocumentFromAuth(user, {
+        displayName,
+      });
+
+      setCurrentUser(createUser);
+
       resetFormFields();
-      console.info(
-        `%c user ${displayName} created successfully. User: ${JSON.stringify(
-          user,
-          null,
-          3
-        )}`,
-        css
-      );
     } catch (error) {
       if (error.code === "auth/email-already-in-use") {
         alert("Cannot create user, email already in use!");

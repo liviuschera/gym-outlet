@@ -3,10 +3,17 @@ import "./navigation.styles.scss";
 import logo from "../../assets/logo.png";
 import { useContext } from "react";
 import { UserContext } from "../../context/user.context";
+import { signOutUser } from "../../utils/firebase/firebase.utils";
 
 const Navigation = () => {
-  const { currentUser } = useContext(UserContext);
+  const { currentUser, setCurrentUser } = useContext(UserContext);
   console.log("navigation.component.js currentUser: ", currentUser);
+
+  const signOutUserHandler = async () => {
+    const response = await signOutUser();
+    console.log("signOutUserHandler response: ", response);
+    setCurrentUser(null);
+  };
 
   return (
     <>
@@ -18,9 +25,15 @@ const Navigation = () => {
           <Link className="nav-link" to="/shop">
             SHOP
           </Link>
-          <Link className="nav-link" to="/authentication">
-            SIGN IN
-          </Link>
+          {currentUser ? (
+            <span className="nav-link" onClick={signOutUserHandler}>
+              SIGN OUT
+            </span>
+          ) : (
+            <Link className="nav-link" to="/authentication">
+              SIGN IN
+            </Link>
+          )}
         </div>
       </div>
       <Outlet />
