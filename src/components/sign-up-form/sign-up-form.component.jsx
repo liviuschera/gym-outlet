@@ -46,7 +46,7 @@ const SignUpForm = () => {
         displayName,
       });
 
-      setCurrentUser(createUser);
+      // setCurrentUser(createUser);
 
       resetFormFields();
     } catch (error) {
