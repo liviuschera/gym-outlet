@@ -5,11 +5,12 @@ const CartItem = ({ cartItem }) => {
 
   return (
     <div className="cart-item-container">
-      <img src={imageUrl} alt={name} />
+      <img src={imageUrl} alt={`${name}`} />
       <div className="item-details">
-        <h2 className="name">{name}</h2>
-        <span>{quantity ?? 1}x</span>
-        <span>${price}</span>
+        <span className="name">{name}</span>
+        <span className="price">
+          {quantity ?? 1}x${price}
+        </span>
       </div>
     </div>
   );
