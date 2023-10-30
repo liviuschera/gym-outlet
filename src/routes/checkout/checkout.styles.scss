@@ -1,0 +1,20 @@
+.checkout-container {
+  width: 80vw;
+  margin: 0 auto;
+
+  .checkout-header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-bottom: 0;
+    margin-bottom: 0;
+  }
+
+  .title {
+    display: inline;
+  }
+}
+
+.checkout-hr {
+  margin-bottom: 20px;
+}
