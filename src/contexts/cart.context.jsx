@@ -58,6 +58,25 @@ export const CartProvider = ({ children }) => {
     setCartItems(addCartItem(cartItems, productToAdd));
   };
 
+  const incrementItemQuantity = (productToIncrement) => {
+    const itemToIncrement = cartItems.find(
+      (item) => item.id === productToIncrement.id
+    );
+    itemToIncrement.quantity++;
+    setCartItems([...cartItems]);
+  };
+
+  const decrementItemQuantity = (productToDecrement) => {
+    const itemToDecrement = cartItems.find(
+      (item) => item.id === productToDecrement.id
+    );
+    itemToDecrement.quantity--;
+    if (itemToDecrement.quantity === 0) {
+      return removeItemFromCart(productToDecrement);
+    }
+    setCartItems([...cartItems]);
+  };
+
   const value = {
     isCartOpen,
     setIsCartOpen,
@@ -66,6 +85,8 @@ export const CartProvider = ({ children }) => {
     cartTotalItems,
     cartTotalPrice,
     removeItemFromCart,
+    incrementItemQuantity,
+    decrementItemQuantity,
   };
   console.log("CartProvider ~ value.cartItems", value.cartItems);
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;

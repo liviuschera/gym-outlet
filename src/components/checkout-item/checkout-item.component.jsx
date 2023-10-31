@@ -4,19 +4,30 @@ import { useContext } from "react";
 
 const CheckoutItem = ({ item }) => {
   const { name, price, imageUrl, quantity } = item;
-  const { removeItemFromCart } = useContext(CartContext);
+  const { removeItemFromCart, incrementItemQuantity, decrementItemQuantity } =
+    useContext(CartContext);
 
   return (
     <>
       <div className="checkout-row">
         <img className="item-img" src={imageUrl} alt={name} />
-        <span className="item-info">{name}</span>
+        <span className="name">{name}</span>
         <div className="quantity-container">
-          <span>{"\u276C"}</span>
+          <span
+            onClick={() => decrementItemQuantity(item)}
+            className="decrement-quantity"
+          >
+            {"\u276C"}
+          </span>
           <span className="quantity">{quantity}</span>
-          <span>{"\u276D"}</span>
+          <span
+            onClick={() => incrementItemQuantity(item)}
+            className="increment-quantity"
+          >
+            {"\u276D"}
+          </span>
         </div>
-        <span className="item-info">${price}</span>
+        <span className="price">${price}</span>
         <span onClick={() => removeItemFromCart(item)} className="remove-item">
           {"\u2715"}
         </span>
