@@ -1,12 +1,14 @@
 .checkout-row {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
+  // display: flex;
+  // flex-direction: row;
+  // justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
   margin-bottom: 20px;
-  align-items: center;
+  // align-items: center;
 
   .item-img {
-    width: 55px;
+    width: 100px;
   }
 
   .quantity-container {
@@ -14,5 +16,9 @@
       padding-left: 10px;
       padding-right: 10px;
     }
+  }
+
+  .remove-item {
+    cursor: pointer;
   }
 }

@@ -1,13 +1,14 @@
 .checkout-container {
-  width: 80vw;
+  width: 60vw;
   margin: 0 auto;
 
   .checkout-header {
-    display: flex;
-    flex-direction: row;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
-    padding-bottom: 0;
-    margin-bottom: 0;
+    // padding-bottom: 0;
+    // margin-bottom: 0;
+    // justify-self: end;
   }
 
   .title {
