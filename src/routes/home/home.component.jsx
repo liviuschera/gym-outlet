@@ -5,7 +5,7 @@ const Home = () => {
   const categories = [
     {
       id: 1,
-      title: "Resistance training",
+      title: "Resistance Training",
       imageUrl: "https://i.ibb.co/kyLgf6L/strength-listing-hero-Custom.jpg",
     },
     {
@@ -21,7 +21,7 @@ const Home = () => {
     },
     {
       id: 4,
-      title: "Elliptical machines & crosstrainers",
+      title: "Elliptical Machines & Crosstrainers",
       imageUrl:
         "https://i.ibb.co/Rz4SKww/home-gym-lose-weight-dakest-Custom.jpg",
     },
@@ -32,7 +32,7 @@ const Home = () => {
     },
     {
       id: 77,
-      title: "Fitness accessories",
+      title: "Fitness Accessories",
       imageUrl: "https://i.ibb.co/54qSJtt/wbas-app-media-card-Custom.jpg",
     },
   ];

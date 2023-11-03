@@ -1,6 +1,6 @@
 const SHOP_DATA = [
   {
-    title: "Resistance training",
+    title: "Resistance Training",
     items: [
       {
         id: 1,
@@ -138,7 +138,7 @@ const SHOP_DATA = [
     ],
   },
   {
-    title: "Elliptical machines & crosstrainers",
+    title: "Elliptical Machines & Crosstrainers",
     items: [
       {
         id: 23,
@@ -186,7 +186,7 @@ const SHOP_DATA = [
     ],
   },
   {
-    title: "Fitness accessories",
+    title: "Fitness Accessories",
     items: [
       {
         id: 30,
