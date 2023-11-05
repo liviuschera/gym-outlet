@@ -1,6 +1,5 @@
 import { createContext, useEffect, useState } from "react";
 import { getDocumentsFromCategoriesCollection } from "../utils/firebase/firebase.utils.js";
-import { doc } from "firebase/firestore";
 
 export const CategoriesContext = createContext({
   categories: {},

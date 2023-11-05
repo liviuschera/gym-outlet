@@ -11,7 +11,7 @@ const CategoriesPreview = () => {
       {Object.keys(categories).map((key) => (
         <div key={key}>
           <h2 className="title">{key}</h2>
-          <hr />
+          <hr className="categories-preview-hr" />
           <div className="products-container">
             {/* displaying a preview of the 1st 4 products in category */}
             {categories[key].slice(0, 4).map((product) => (

@@ -1,0 +1,18 @@
+.category-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  column-gap: 10px;
+  row-gap: 50px;
+
+  .title {
+    margin-top: 55px;
+    text-transform: uppercase;
+  }
+}
+
+// .categories-preview-hr {
+//   position: relative;
+//   bottom: 15px;
+//   width: 33vw;
+//   margin-left: 0;
+// }

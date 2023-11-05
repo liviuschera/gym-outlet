@@ -88,6 +88,5 @@ export const CartProvider = ({ children }) => {
     incrementItemQuantity,
     decrementItemQuantity,
   };
-  console.log("CartProvider ~ value.cartItems", value.cartItems);
   return <CartContext.Provider value={value}>{children}</CartContext.Provider>;
 };
