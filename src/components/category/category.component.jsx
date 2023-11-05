@@ -8,14 +8,13 @@ const Category = () => {
   const { categories } = useContext(CategoriesContext);
   const { category } = useParams();
   const [products, setProducts] = useState([]);
-  console.log(categories[category.toLowerCase()]);
+
   useEffect(() => {
     setProducts(categories[category.toLowerCase()]);
   }, [categories, category]);
 
   return (
     <>
-      {console.log(products)}
       <h2 className="title">{category}</h2>
       <hr className="categories-preview-hr" />
       <div className="category-container">
