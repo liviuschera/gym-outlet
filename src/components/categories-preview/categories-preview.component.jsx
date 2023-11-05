@@ -2,6 +2,7 @@ import "./categories-preview.styles.scss";
 import { useContext } from "react";
 import { CategoriesContext } from "../../contexts/categories.context";
 import ProductCard from "../../components/product-card/product-card.component";
+import { Link } from "react-router-dom";
 
 const CategoriesPreview = () => {
   const { categories } = useContext(CategoriesContext);
@@ -10,7 +11,9 @@ const CategoriesPreview = () => {
     <>
       {Object.keys(categories).map((key) => (
         <div key={key}>
-          <h2 className="title">{key}</h2>
+          <Link to={`${key}`}>
+            <h2 className="title">{key}</h2>
+          </Link>
           <hr className="categories-preview-hr" />
           <div className="products-container">
             {/* displaying a preview of the 1st 4 products in category */}
