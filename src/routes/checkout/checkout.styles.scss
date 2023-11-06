@@ -6,16 +6,28 @@
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     justify-content: space-between;
-    // padding-bottom: 0;
-    // margin-bottom: 0;
-    // justify-self: end;
-  }
+    justify-items: center;
 
-  .title {
-    display: inline;
+    .title {
+      display: inline;
+    }
+
+    .product {
+      justify-self: start;
+    }
+
+    .remove {
+      justify-self: end;
+    }
   }
 }
 
 .checkout-hr {
   margin-bottom: 20px;
+}
+
+.checkout-total {
+  text-align: right;
+  font-size: 130%;
+  font-weight: bold;
 }

@@ -1,6 +1,7 @@
 import "./checkout-item.styles.scss";
 import { CartContext } from "../../contexts/cart.context";
 import { useContext } from "react";
+import formatNumber from "../../utils/number-format";
 
 const CheckoutItem = ({ item }) => {
   const { name, price, imageUrl, quantity } = item;
@@ -27,7 +28,7 @@ const CheckoutItem = ({ item }) => {
             {"\u276D"}
           </span>
         </div>
-        <span className="price">${price}</span>
+        <span className="price">${formatNumber(price)}</span>
         <span onClick={() => removeItemFromCart(item)} className="remove-item">
           {"\u2715"}
         </span>

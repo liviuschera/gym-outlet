@@ -67,10 +67,10 @@ export const getDocumentsFromCategoriesCollection = async () => {
     },
     {}
   );
-  console.log(
-    "reducedCategories",
-    Object.keys(reducedCategories).map((key) => reducedCategories[key])
-  );
+  // console.log(
+  //   "reducedCategories",
+  //   Object.keys(reducedCategories).map((key) => reducedCategories[key])
+  // );
   return reducedCategories;
 };
 

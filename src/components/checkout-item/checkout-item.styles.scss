@@ -1,14 +1,13 @@
 .checkout-row {
-  // display: flex;
-  // flex-direction: row;
-  // justify-content: space-between;
   display: grid;
   grid-template-columns: repeat(5, 1fr);
-  margin-bottom: 20px;
-  // align-items: center;
+  align-items: center;
+  justify-items: center;
+  font-size: 120%;
 
   .item-img {
-    width: 100px;
+    width: 150px;
+    justify-self: start;
   }
 
   .quantity-container {
@@ -28,5 +27,11 @@
     z-index: 1;
     padding: 5px;
     margin: -5px;
+    font-weight: bold;
+  }
+
+  .remove-item {
+    justify-self: end;
+    margin-right: 1rem;
   }
 }
