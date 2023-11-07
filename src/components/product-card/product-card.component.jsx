@@ -26,7 +26,7 @@ const ProductCard = ({ product }) => {
     );
   };
 
-  console.log(name, " => ", price, ": ", sale);
+  // console.log(name, " => ", price, ": ", sale);
 
   return (
     <div className="product-card-container">
