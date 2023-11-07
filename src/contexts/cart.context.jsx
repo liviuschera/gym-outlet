@@ -1,4 +1,5 @@
 import { createContext, useState } from "react";
+import formatNumber, { applyProductSale } from "../utils/number-format";
 
 const addCartItem = (cartItems, productToAdd) => {
   productToAdd.quantity = productToAdd.quantity ?? 1;
@@ -41,7 +42,9 @@ export const CartProvider = ({ children }) => {
 
   const cartTotalPrice = cartItems.reduce(
     (accumulator, currentItem) =>
-      accumulator + currentItem.quantity * currentItem.price,
+      accumulator +
+      currentItem.quantity *
+        applyProductSale(currentItem.price, currentItem.sale, false),
     0
   );
 

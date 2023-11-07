@@ -18,7 +18,8 @@ const ProductCard = ({ product }) => {
     const priceWithSale = price - (price * sale) / 100;
     return sale > 0 ? (
       <span>
-        {priceWithSale.toFixed(0)} <del>${price}</del>
+        {formatNumber(priceWithSale.toFixed(0))}{" "}
+        <del>${formatNumber(price)}</del>
       </span>
     ) : (
       <span>{price}</span>

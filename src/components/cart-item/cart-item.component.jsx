@@ -1,8 +1,8 @@
 import "./cart-item.styles.scss";
-import formatNumber from "../../utils/number-format";
+import formatNumber, { applyProductSale } from "../../utils/number-format";
 
 const CartItem = ({ cartItem }) => {
-  const { name, price, imageUrl, quantity } = cartItem;
+  const { name, price, imageUrl, quantity, sale } = cartItem;
 
   return (
     <div className="cart-item-container">
@@ -10,7 +10,7 @@ const CartItem = ({ cartItem }) => {
       <div className="item-details">
         <span className="name">{name}</span>
         <span className="price">
-          {quantity ?? 1} x ${formatNumber(price)}
+          {quantity ?? 1} x ${applyProductSale(price, sale)}
         </span>
       </div>
     </div>
