@@ -3,7 +3,7 @@ import "./sale-ribbon.styles.scss";
 const SaleRibbon = ({ sale }) => {
   return (
     <div className="ribbon ribbon-top-left">
-      <span>Sale {sale}%</span>
+      <span>save {sale}%</span>
     </div>
   );
 };
