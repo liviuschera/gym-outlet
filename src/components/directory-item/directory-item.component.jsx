@@ -3,7 +3,6 @@ import {
   Body,
   DirectoryItemContainer,
 } from "./directory-item.styles";
-import { Link } from "react-router-dom";
 
 const DirectoryItem = ({ category }) => {
   const { imageUrl, title } = category;

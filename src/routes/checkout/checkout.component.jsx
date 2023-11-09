@@ -3,11 +3,12 @@ import { CartContext, cartTotalPrice } from "../../contexts/cart.context";
 import "./checkout.styles.scss";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import formatNumber from "../../utils/number-format";
+import PaymentForm from "../../components/payment-form/payment-form.component";
 
 const Checkout = () => {
   const { cartItems, cartTotalPrice } = useContext(CartContext);
 
-  console.log("cartITnem", cartItems);
+  // console.log("cartITnem", cartItems);
 
   return (
     <section className="checkout-container">
@@ -25,6 +26,7 @@ const Checkout = () => {
       <footer className="checkout-total">
         TOTAL: ${formatNumber(cartTotalPrice)}
       </footer>
+      <PaymentForm />
     </section>
   );
 };
