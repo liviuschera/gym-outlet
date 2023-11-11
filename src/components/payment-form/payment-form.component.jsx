@@ -2,9 +2,12 @@ import { useContext, useState } from "react";
 import { UserContext } from "../../contexts/user.context";
 import { CardElement, useStripe, useElements } from "@stripe/react-stripe-js";
 
-import Button, { BUTTON_TYPE_CLASSES } from "../button/button.component";
-import { PaymentFormContainer, FormContainer } from "./payment-form.styles";
-import { PaymentButton } from "../button/button.styles";
+import { BUTTON_TYPE_CLASSES } from "../button/button.component";
+import {
+  PaymentFormContainer,
+  FormContainer,
+  PaymentButton,
+} from "./payment-form.styles";
 
 const PaymentForm = ({ total }) => {
   const stripe = useStripe();
@@ -57,10 +60,10 @@ const PaymentForm = ({ total }) => {
         <h2>Credit Card Payment</h2>
         <CardElement />
         <PaymentButton
-          isProcessingPayment={isProcessingPayment}
+          isLoading={isProcessingPayment}
           buttonType={BUTTON_TYPE_CLASSES.inverted}
         >
-          {isProcessingPayment ? "Processing payment" : "Pay now"}
+          Pay Now
         </PaymentButton>
       </FormContainer>
     </PaymentFormContainer>

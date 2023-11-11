@@ -1,8 +1,8 @@
 import styled from "styled-components";
 
-export const PaymentFormContainer = styled.div`
-  /* border: 1px solid grey; */
+import Button from "../button/button.component";
 
+export const PaymentFormContainer = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -17,4 +17,8 @@ export const PaymentFormContainer = styled.div`
 export const FormContainer = styled.form`
   height: 100px;
   min-width: 350px;
+`;
+
+export const PaymentButton = styled(Button)`
+  margin: 30px auto;
 `;
