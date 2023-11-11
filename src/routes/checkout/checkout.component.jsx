@@ -1,5 +1,5 @@
 import { useContext } from "react";
-import { CartContext, cartTotalPrice } from "../../contexts/cart.context";
+import { CartContext } from "../../contexts/cart.context";
 import "./checkout.styles.scss";
 import CheckoutItem from "../../components/checkout-item/checkout-item.component";
 import formatNumber from "../../utils/number-format";
@@ -26,7 +26,7 @@ const Checkout = () => {
       <footer className="checkout-total">
         TOTAL: ${formatNumber(cartTotalPrice)}
       </footer>
-      <PaymentForm />
+      <PaymentForm total={cartTotalPrice} />
     </section>
   );
 };

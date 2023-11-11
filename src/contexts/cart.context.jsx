@@ -1,5 +1,5 @@
 import { createContext, useState } from "react";
-import formatNumber, { applyProductSale } from "../utils/number-format";
+import { applyProductSale } from "../utils/number-format";
 
 const addCartItem = (cartItems, productToAdd) => {
   productToAdd.quantity = productToAdd.quantity ?? 1;

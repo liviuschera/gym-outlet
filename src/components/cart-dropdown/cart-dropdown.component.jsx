@@ -12,7 +12,7 @@ import { CartContext } from "../../contexts/cart.context";
 const CartDropdown = () => {
   const { cartItems } = useContext(CartContext);
 
-  console.log("cartitems: ", cartItems);
+  // console.log("cartitems: ", cartItems);
   return (
     <CartDropdownContainer>
       <CartItems>
