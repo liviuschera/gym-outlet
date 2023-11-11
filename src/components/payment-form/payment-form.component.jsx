@@ -15,9 +15,6 @@ const PaymentForm = ({ total }) => {
   const { currentUser } = useContext(UserContext);
   const [isProcessingPayment, setIsProcessingPayment] = useState(false);
 
-  console.log("cartTotalIPrice", total);
-  console.log("currentUser: ", currentUser);
-
   const handlePayment = async (event) => {
     event.preventDefault();
 

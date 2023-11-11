@@ -20,10 +20,7 @@ const getButton = (buttonType = BUTTON_TYPE_CLASSES.base) =>
 
 const Button = ({ children, isLoading, buttonType, ...otherProps }) => {
   const CustomButton = getButton(buttonType);
-  console.log(
-    "🚀 ~ file: button.component.jsx:24 ~ Button ~ CustomButton",
-    CustomButton
-  );
+
   return (
     <CustomButton disabled={isLoading} {...otherProps}>
       {isLoading ? <ButtonSpinner /> : children}
