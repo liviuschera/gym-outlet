@@ -1,6 +1,6 @@
 # The Gym Outlet
 
-E-commerce web site built using RactJS, Firebase and Stripe integration 
+E-commerce web site built using RactJS, React Router, Firebase and Stripe integration 
 
 ___
 
